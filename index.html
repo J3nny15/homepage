@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blackpink Homepage</title>
+    <style>
+        /* Set up the Blackpink-themed background */
+        body {
+            background: url('https://wallpapers.com/images/featured-full/blackpink-logo-pictures-5k0bcrgnb4cc6kt9.jpg') no-repeat center center fixed; /* Replace with your background image URL */
+            background-size: cover;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden; /* Prevent scrollbars from appearing */
+            position: relative; /* Positioning context for sparkles */
+        }
+
+        /* Add some sparkle */
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.5); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff79c6, #ffb86c, #50fa7b);
+            border-radius: 50%;
+            animation: sparkle 1s infinite;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-top: 20vh;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        main p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Style for repository buttons */
+        .repo-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #ff007f; /* Blackpink color */
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .repo-button:hover {
+            background-color: #ff6fd9; /* Lighter shade of Blackpink color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Jenny's Homepage</h1>
+    </header>
+    <main>
+        <p>This is my BLACKPINK-themed GitHub Pages site.</p>
+        <a href="https://j3nny15.github.io/sari-sari-store/" class="repo-button">Sari-Sari Store</a>
+        <a href="https://j3nny15.github.io/resume/" class="repo-button">Resume</a>
+        <a href="https://j3nny15.github.io/Restaurant/" class="repo-button">Restaurant</a>
+        <a href="https://j3nny15.github.io/cor/" class="repo-button">C.O.R.</a>
+    </main>
+    <script>
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            document.body.appendChild(sparkle);
+
+            const size = Math.random() * 10 + 5;
+            sparkle.style.width = `${size}px`;
+            sparkle.style.height = `${size}px`;
+
+            const posX = Math.random() * window.innerWidth;
+            const posY = Math.random() * window.innerHeight;
+            sparkle.style.left = `${posX}px`;
+            sparkle.style.top = `${posY}px`;
+
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        setInterval(createSparkle, 300);
+    </script>
+</body>
+</html>
+<ALOASK-SEPARATE-EDITORS><ALOASK-SEPARATE-EDITORS>
